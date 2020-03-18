@@ -143,32 +143,32 @@ gulp.task("deploy:docs", _ =>
 		.pipe(xpager_conn.dest(connectionSettings.xpager.dirName))
 );
 
-gulp.task("deploy", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), "deploy:docs"));
+gulp.task("deploy", gulp.series(gulp.parallel("postcss"/*, "pug"*/, "imagemin"), "deploy:docs"));
 
 
 
 const local = _ => {
 	gulp.watch(["src/sss/**/*.sss"], gulp.series("postcss"));
-	gulp.watch('src/pug/**/*', gulp.series("pug"));
-	gulp.watch("src/js/workers/**/*", gulp.series("move:workers"));
+	// gulp.watch('src/pug/**/*', gulp.series("pug"));
+	// gulp.watch("src/js/workers/**/*", gulp.series("move:workers"));
 	gulp.watch("src/img/**/*", gulp.series("imagemin"));
 },
 localWebpack = () => {
-	process.exec("npm run localWatch");
+	// process.exec("npm run localWatch");
 },
 watch = _ => {
 	gulp.watch("docs/css/**/*", gulp.series("deploy:css"));
-	gulp.watch("docs/js/*.js", gulp.series("deploy:js"));
+	// gulp.watch("docs/js/*.js", gulp.series("deploy:js"));
 	gulp.watch("docs/img/**/*", gulp.series("deploy:img"));
 },
 remoteWebpack = () => {
-	process.exec("npm run remoteWatch");
+	// process.exec("npm run remoteWatch");
 };
 
-gulp.task("deploy-to-server", gulp.series(gulp.parallel("postcss", "pug", "imagemin", "move:files"), gulp.parallel(local, remoteWebpack, watch)));
+gulp.task("deploy-to-server", gulp.series(gulp.parallel("postcss"/*, "pug"*/, "imagemin", "move:files"), gulp.parallel(local, remoteWebpack, watch)));
 
-gulp.task("finish:him", gulp.series(gulp.parallel("postcss", "imagemin", "move:files"), gulp.parallel("deploy:css", "deploy:js")));
+gulp.task("finish:him", gulp.series(gulp.parallel("postcss", "imagemin", "move:files"), gulp.parallel("deploy:css"/*, "deploy:js"*/)));
 
-gulp.task("default", gulp.series(gulp.parallel("postcss", "pug", "imagemin", "move:fonts", "move:files"), gulp.parallel(local, localWebpack, "browser-sync")))
+gulp.task("default", gulp.series(gulp.parallel("postcss"/*, "pug"*/, "imagemin", "move:fonts", "move:files"), gulp.parallel(local, localWebpack, "browser-sync")))
 
 gulp.task('clearcache', (callback) => { $.cache.clearAll(); callback();});

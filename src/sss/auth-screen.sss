@@ -1,0 +1,38 @@
+.auth
+	display: flex
+	margin: 0 0 -29px -2em
+
+	&__item
+		width: calc((100% - 29px * 3) / 3)
+		background: #fff
+		margin: 0 0 29px 2em
+		box-shadow: -1px 3px 9px 0 rgba(0,0,0,.08)
+
+		&-title
+			font-size: em(20, 15)
+			padding: 20px 40px 25px
+			border-bottom: 1px solid var(--main-color)
+
+		&-content
+			padding: 25px 40px 30px
+			
+	&-form
+		font-size: em(15)
+
+		&__bot
+			display: flex
+			align-items: center
+			margin: 25px 0 0
+
+			.default-btn
+				flex: none
+				margin-right: 30px
+
+			&-link
+
+				a
+					color: #c0c0c0
+					text-decoration: none
+					border-bottom: 1px solid currentColor
+					font-size: em(14, 15)
+					line-height: em(24, 15)

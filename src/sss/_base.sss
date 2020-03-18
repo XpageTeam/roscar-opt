@@ -88,13 +88,17 @@ select
 .head, .footer
 	flex: none
 
-#content
+#app
 	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	
+.content
+	flex: 1 1 auto
+	display: flex
 
-.inner-content
-	flex: 1 1 auto
-	// position: relative
-	z-index: 2
+	> .wrapper
+		align-self: center
 
 a
 	color: #000
@@ -105,7 +109,7 @@ a
 		white-space: nowrap
 
 	&:not([class])
-		color: var(--main-color-darken)
+		color: var(--main-color)
 		border-bottom: 1px solid transparent
 
 		&:hover, &:focus
