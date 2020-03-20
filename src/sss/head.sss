@@ -1,6 +1,6 @@
 .head
 	padding: 1.25rem 0 1.375rem
-	background: #fff
+	color: #fff var(--main-color)
 	box-shadow: -1px 3px 9px 0 rgba(0,0,0,.08)
 	margin: 0 0 1.375rem
 	flex: none
@@ -17,7 +17,16 @@
 		flex: 1 1 auto
 
 	&__contacts
-		margin-right: 15px
+		margin-right: 25px
+
+	&__links
+		display: flex
+		align-items: center
+
+		&-link
+
+			&:not(:last-child)
+				margin-right: 20px
 
 .logo
 	display: block
@@ -35,5 +44,38 @@
 		&:not(:last-child)
 			margin-right: 12px
 
+	&__link
+		color: inherit
+
 .h-contacts
 	margin: 0
+
+	a
+		color: inherit
+
+.lc-link
+	size: 20px
+	background: url("../img/ico-lc.svg") center no-repeat
+	background-size: contain
+	display: block
+
+.cart-link
+	size: 20px
+	display: block
+	background: url("../img/ico-cart.svg") center no-repeat
+	background-size: contain
+	
+	&[data-count]
+		position: relative
+
+		&:after
+			content: attr(data-count)
+			border-radius: 50%
+			color: #000 #fff
+			size: 12px
+			position: absolute
+			bottom: -4px
+			right: -4px
+			font-size: 10px
+			line-height: 12px
+			text-align: center
