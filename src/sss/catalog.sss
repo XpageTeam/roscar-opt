@@ -19,7 +19,15 @@
 	&__banner, &__list
 		margin: 40px 0 0
 
+	&__list
+		display: flex
+
+		&-filter
+			width: 450px
+			margin-right: 20px
+
 .cat-list
+	flex: 1 1 auto
 
 	&__item
 
@@ -57,6 +65,15 @@
 
 	&__title
 		height: auto
+	
+	&__price
+		
+		&-val
+			margin-right: 10px
+			color: #000
+
+		&-val, &-count
+			display: block
 
 .counter__btn
 	border: none

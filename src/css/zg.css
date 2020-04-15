@@ -3346,7 +3346,7 @@ body.lb-disable-scrolling {
     display: block;
     padding: 34px 37px 39px;
     border-radius: 25px;
-    width: 380px;
+    /* width: 380px; */
     background: #fff;
     -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .1);
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .1);
@@ -3742,7 +3742,6 @@ body.lb-disable-scrolling {
     font-family: SFUIDisplayMedium, Tahoma, sans-serif;
     color: #262626;
     text-align: center;
-    padding-top: 4px
 }
 
 .counter__btn {
