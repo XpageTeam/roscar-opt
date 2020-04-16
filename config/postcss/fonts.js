@@ -2,31 +2,31 @@ module.exports = {
 	formats: 'local woff woff2',
 	display: "swap",
 	custom: {
-		"Montserat": {
+		"SFUIDisplay": {
 			variants: {
 				normal: {
-					300: {
-						url: {
-							woff: "../fonts/montserrat-light.woff",
-							woff2: "../fonts/montserrat-light.woff2"
-						}
-					},
 					400: {
 						url: {
-							woff: "../fonts/montserrat-regular.woff",
-							woff2: "../fonts/montserrat-regular.woff2"
+							woff: "../fonts/SFUIDisplayRegular.woff",
+							woff2: "../fonts/SFUIDisplayRegular.woff2"
 						}
 					},
 					500: {
 						url: {
-							woff: "../fonts/montserrat-medium.woff",
-							woff2: "../fonts/montserrat-medium.woff2"
+							woff: "../fonts/SFUIDisplayMedium.woff",
+							woff2: "../fonts/SFUIDisplayMedium.woff2"
+						}
+					}, 
+					600: {
+						url: {
+							woff: "../fonts/SFUIDisplaySemibold.woff",
+							woff2: "../fonts/SFUIDisplaySemibold.woff2"
 						}
 					}, 
 					700: {
 						url: {
-							woff: "../fonts/montserrat-bold.woff",
-							woff2: "../fonts/montserrat-bold.woff2"
+							woff: "../fonts/SFUIDisplayBold.woff",
+							woff2: "../fonts/SFUIDisplayBold.woff2"
 						}
 					}
 				}

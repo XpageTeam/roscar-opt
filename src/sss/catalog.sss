@@ -14,16 +14,21 @@
 			margin: 0 0 40px
 
 		&-form
-			max-width: 500px
 
-	&__banner, &__list
+			&_example
+				margin: 5px 0 0
+				font-size: 11px
+				padding-left: 16px
+
+	&__banner
 		margin: 40px 0 0
 
 	&__list
 		display: flex
 
 		&-filter
-			width: 450px
+			width: 400px
+			flex: none
 			margin-right: 20px
 
 .cat-list
@@ -38,11 +43,15 @@
 	display: flex
 
 	&__input
-		flex: 1 1 auto
+		width: 400px
+
+		input
+			box-shadow: 2px 2px 5px 0 rgba(0,0,0,.1)
 
 	&__submit
-		margin-left: 15px
+		margin-left: 20px
 		flex: none
+		display: flex
 
 .catalog-banner
 	display: block
@@ -56,6 +65,11 @@
 	
 	form
 		display: flex
+
+	&__img
+		min-width: 200px
+		width: 200px
+		padding: 0 30px 0 0
 
 	&__desc
 		padding-top: 0 !important
@@ -71,6 +85,10 @@
 		&-val
 			margin-right: 10px
 			color: #000
+			font-size: 23px
+
+		&-count
+			font-size: 19px
 
 		&-val, &-count
 			display: block
